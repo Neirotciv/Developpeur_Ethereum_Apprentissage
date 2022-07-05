@@ -17,3 +17,10 @@ npm install web3
 # Signer les transactions
 npm install ethereumjs-tx
 ```
+
+# Développement d'une DApp
+
+```javascript
+// Imports
+const Web3 = require('web3');
+```

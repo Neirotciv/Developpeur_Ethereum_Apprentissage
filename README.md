@@ -66,6 +66,12 @@ Utilisation de Infura : https://infura.io/
 # Pouvoir utiliser des variables d'environnements, à mettre dans gitignore .env
 npm install --save dotenv
 ```
+
+```javascript
+// Import
+require('dotenv').config();
+```
+
 - INFURA_ID = api keya
 - MNEMONIC = passphrase
 
