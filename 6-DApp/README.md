@@ -23,4 +23,10 @@ npm install ethereumjs-tx
 ```javascript
 // Imports
 const Web3 = require('web3');
+const Tx = require('ethereumjs-tx').Transaction;
+```
+
+# Box React
+```bash
+truffle unbox react
 ```
