@@ -1,0 +1,105 @@
+{
+  "author": "Victorien Lambert",
+  "kind": "dev",
+  "methods":
+  {
+    "addProposal(string)":
+    {
+      "custom:emit": "The id of the registered proposal",
+      "custom:require": "proposal is not empty and proposal session is open, the proposal array is also limited to 100",
+      "details": "onlyVoters modifier, a person must be registered as a voter to use the feature",
+      "params":
+      {
+        "_desc": "The description of the proposal"
+      }
+    },
+    "addVoter(address)":
+    {
+      "custom:emit": "The address of the newly registered voter",
+      "custom:require": "registration open and voters registered",
+      "details": "onlyOwner modifier from Ownable of the OpenZeppelin library is used",
+      "params":
+      {
+        "_addr": "The address of a new voter"
+      }
+    },
+    "endProposalsRegistering()":
+    {
+      "custom:emit": "The previous and the new workflow status",
+      "custom:require": "The current session must be proposal registration started",
+      "details": "onlyOwner modifier from Ownable of the OpenZeppelin library is used"
+    },
+    "endVotingSession()":
+    {
+      "custom:emit": "The previous and the new workflow status",
+      "custom:require": "The current session must be voting started",
+      "details": "onlyOwner modifier from Ownable of the OpenZeppelin library is used"
+    },
+    "getOneProposal(uint256)":
+    {
+      "details": "onlyVoters modifier, a person must be registered as a voter to use the feature",
+      "params":
+      {
+        "_id": "This is the id of the table of proposals"
+      },
+      "returns":
+      {
+        "_0": "the proposal, description and number of votes"
+      }
+    },
+    "getVoter(address)":
+    {
+      "details": "onlyVoters modifier, a person must be registered as a voter to use the feature",
+      "params":
+      {
+        "_addr": "Address of the voter"
+      },
+      "returns":
+      {
+        "_0": "The struc of the voter"
+      }
+    },
+    "owner()":
+    {
+      "details": "Returns the address of the current owner."
+    },
+    "renounceOwnership()":
+    {
+      "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+    },
+    "setVote(uint256)":
+    {
+      "custom:emit": "The voter's address and the id of the proposal they voted for",
+      "custom:require": "The current session must be voting started, the id must exist and the voters have not already voted",
+      "details": "onlyVoters modifier, a person must be registered as a voter to use the feature",
+      "params":
+      {
+        "_id": "The id of the proposal to vote for"
+      }
+    },
+    "startProposalsRegistering()":
+    {
+      "custom:emit": "The previous and the new workflow status",
+      "custom:require": "The current session must be registering voters",
+      "details": "onlyOwner modifier from Ownable of the OpenZeppelin library is used"
+    },
+    "startVotingSession()":
+    {
+      "custom:emit": "The previous and the new workflow status",
+      "custom:require": "The current session must be proposal registration ended",
+      "details": "onlyOwner modifier from Ownable of the OpenZeppelin library is used"
+    },
+    "tallyVotes()":
+    {
+      "custom:emit": "The previous and the new workflow status",
+      "custom:require": "The current session must be voting ended",
+      "details": "onlyOwner modifier from Ownable of the OpenZeppelin library is used"
+    },
+    "transferOwnership(address)":
+    {
+      "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+    }
+  },
+  "title": "DApp Voting system",
+  "version": 1
+}

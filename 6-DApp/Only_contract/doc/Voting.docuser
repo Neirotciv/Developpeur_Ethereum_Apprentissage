@@ -1,0 +1,48 @@
+{
+  "kind": "user",
+  "methods":
+  {
+    "addProposal(string)":
+    {
+      "notice": "Voters can add a proposal"
+    },
+    "addVoter(address)":
+    {
+      "notice": "Add a new voter"
+    },
+    "endProposalsRegistering()":
+    {
+      "notice": "End the proposal recording session"
+    },
+    "endVotingSession()":
+    {
+      "notice": "End the voting session"
+    },
+    "getOneProposal(uint256)":
+    {
+      "notice": "Get one proposal from his id"
+    },
+    "getVoter(address)":
+    {
+      "notice": "Get the struct of a voter from his address"
+    },
+    "setVote(uint256)":
+    {
+      "notice": "Vote for a proposal from its id"
+    },
+    "startProposalsRegistering()":
+    {
+      "notice": "Start the proposal registration session"
+    },
+    "startVotingSession()":
+    {
+      "notice": "Start the voting session"
+    },
+    "tallyVotes()":
+    {
+      "notice": "Counting of votes and selection of the winner"
+    }
+  },
+  "notice": "A voting system with an owner to add voters and organize the different voting sessions. And registered voters who will be able to add proposals and vote for them.",
+  "version": 1
+}
