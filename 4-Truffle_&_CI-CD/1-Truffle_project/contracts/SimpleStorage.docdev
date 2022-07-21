@@ -1,0 +1,24 @@
+{
+  "kind": "dev",
+  "methods":
+  {
+    "get()":
+    {
+      "details": "Calculates a rectangle's surface and perimeter.",
+      "returns":
+      {
+        "_0": "data The calculated surface."
+      }
+    },
+    "set(uint256)":
+    {
+      "details": "Calculates a rectangle's surface and perimeter.",
+      "params":
+      {
+        "x": "of the rectangle."
+      }
+    }
+  },
+  "title": "Shape calculator. ",
+  "version": 1
+}
